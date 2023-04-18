@@ -5,7 +5,7 @@ import TaskItem from './TaskItem';
 //styles
 import styles from './TaskList.module.css';
 
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, deleteTask}) => {
     return(
         <ul className={styles.tasks}>
             {
@@ -14,6 +14,7 @@ const TaskList = ({tasks}) => {
                     <TaskItem 
                         key={task.id}
                         task={task}
+                        deleteTask={deleteTask}
                     />
                 ))
             }
